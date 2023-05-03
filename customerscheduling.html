@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Scheduling System</title>
+    <style>
+      .pic {
+        display: none;
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="pic" src="images/css1.jpg" alt="Picture 1">
+    <img class="pic" src="images/css2.jpg" alt="Picture 2">
+    <img class="pic" src="images/css3.jpg" alt="Picture 3">
+    <img class="pic" src="images/css4.jpg" alt="Picture 4">
+    
+    <script>
+      let i = 0;
+      const pics = document.getElementsByClassName("pic");
+      
+      function changePic() {
+        pics[i].style.display = "none";
+        i = (i + 1) % pics.length;
+        pics[i].style.display = "block";
+      }
+      
+      pics[i].style.display = "block";
+      setInterval(changePic, 3000); // Change picture every 3 seconds
+    </script>
+  </body>
+</html>
